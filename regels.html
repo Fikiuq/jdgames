@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regels - JDGames</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo.png" alt="JDGames Logo" class="logo"> Home</a></li>
+                <li><a href="staff.html">Staff Team</a></li>
+                <li><a href="regels.html">Regels</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>⚔️ Regels voor de JD Games Minecraft Server ⚔️</h1>
+                <p>Maak een keuze voor de specifieke regels:</p>
+
+                <!-- Dropdown voor keuzemenu -->
+                <div class="keuze-menu">
+                    <label for="keuze">Kies de gamemode:</label>
+                    <select id="keuze" onchange="showRules(this.value)">
+                        <option value="">Selecteer een gamemode</option>
+                        <option value="factions">Factions Regels</option>
+                        <option value="skyblock">Skyblock Regels</option>
+                    </select>
+                </div>
+
+                <!-- Sectie voor Factions Regels -->
+                <div id="factions-regels" class="regels-sectie" style="display:none;">
+                    <h2>⚔️ Factions Regels ⚔️</h2>
+                    <ul>
+                        <li>1. Geen hacking of cheats gebruiken.</li>
+                        <li>2. Geen griefen van andere factions.</li>
+                        <li>3. Respecteer andere spelers en factions.</li>
+                        <li>4. Geen ongepaste taal gebruiken.</li>
+                    </ul>
+                </div>
+
+                <!-- Sectie voor Skyblock Regels -->
+                <div id="skyblock-regels" class="regels-sectie" style="display:none;">
+                    <h2>⚔️ Skyblock Regels ⚔️</h2>
+                    <ul>
+                        <li>1. Geen island griefen.</li>
+                        <li>2. Geen gebruik maken van illegale plugins of hacks.</li>
+                        <li>3. Je eiland moet openbaar zijn voor andere spelers om te bezoeken.</li>
+                        <li>4. Geen exploits gebruiken die de economie verstoren.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JDGames. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        // Functie om de juiste regels te tonen op basis van de gekozen gamemode
+        function showRules(value) {
+            // Verberg beide regels secties
+            document.getElementById("factions-regels").style.display = "none";
+            document.getElementById("skyblock-regels").style.display = "none";
+
+            // Toon de juiste sectie op basis van de keuze
+            if (value === "factions") {
+                document.getElementById("factions-regels").style.display = "block";
+            } else if (value === "skyblock") {
+                document.getElementById("skyblock-regels").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
