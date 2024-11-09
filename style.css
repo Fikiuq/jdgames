@@ -1,10 +1,11 @@
 /* Algemene stijlen voor de pagina */
-body {
+html, body {
+    height: 100%; /* Zorgt ervoor dat de pagina de volledige hoogte van het scherm heeft */
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background: url('b.png') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
-    padding: 0;
     color: #fff;
 }
 
@@ -76,13 +77,19 @@ h2, h3 {
     color: #ffcc00;
 }
 
+/* Zorg ervoor dat de footer altijd onderaan komt */
+main {
+    min-height: calc(100vh - 120px); /* Zorgt ervoor dat de footer onderaan komt */
+    padding-bottom: 60px; /* Dit is de hoogte van de footer */
+}
+
 /* Footer Styling */
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 10px;
+    position: relative; /* Zorgt ervoor dat de footer onderaan blijft als de inhoud groot genoeg is */
+    bottom: 0;
 }
