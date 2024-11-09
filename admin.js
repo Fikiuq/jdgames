@@ -1,4 +1,4 @@
-const adminPassword = "admin123"; // Wachtwoord voor toegang tot het admin panel
+const adminPassword = "JDG@admin"; // Wachtwoord voor toegang tot het admin panel
 const savedPages = JSON.parse(localStorage.getItem("pages")) || [];
 
 function checkPassword() {
