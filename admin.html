@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Panel</h1>
+        <div id="login">
+            <input type="password" id="admin-password" placeholder="Voer het wachtwoord in">
+            <button onclick="checkPassword()">Login</button>
+        </div>
+
+        <div id="panel" style="display:none;">
+            <h2>Pagina Instellingen</h2>
+            <div class="admin-actions">
+                <button onclick="addPage()">Pagina Toevoegen</button>
+                <button onclick="editPage()">Pagina Bewerken</button>
+                <button onclick="deletePage()">Pagina Verwijderen</button>
+            </div>
+
+            <div id="page-details" style="display:none;">
+                <h3>Pagina Bewerkingen</h3>
+                <input type="text" id="page-name" placeholder="Pagina Naam">
+                <textarea id="page-content" placeholder="Pagina Inhoud"></textarea>
+                <button onclick="savePage()">Opslaan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
