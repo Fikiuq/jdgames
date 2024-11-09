@@ -1,55 +1,15 @@
-const adminPassword = "JDG@admin"; // Wachtwoord voor toegang tot het admin panel
-const savedPages = JSON.parse(localStorage.getItem("pages")) || [];
+document.getElementById('edit-page-button').addEventListener('click', function() {
+    var selectedPage = document.getElementById('page-select').value;
+    console.log('Pagina geselecteerd: ' + selectedPage);
 
-function checkPassword() {
-    const enteredPassword = document.getElementById("admin-password").value;
-    if (enteredPassword === adminPassword) {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("panel").style.display = "block";
-    } else {
-        alert("Onjuist wachtwoord.");
-    }
-}
+    // Hier voeg je de logica toe om de inhoud van de geselecteerde pagina op te halen en in de tekstvelden te zetten
+});
 
-function addPage() {
-    document.getElementById("page-details").style.display = "block";
-    document.getElementById("page-name").value = "";
-    document.getElementById("page-content").value = "";
-}
+document.getElementById('save-changes').addEventListener('click', function() {
+    var pageTitle = document.getElementById('page-title').value;
+    var pageContent = document.getElementById('page-content').value;
 
-function savePage() {
-    const pageName = document.getElementById("page-name").value;
-    const pageContent = document.getElementById("page-content").value;
-    
-    if (pageName && pageContent) {
-        savedPages.push({ name: pageName, content: pageContent });
-        localStorage.setItem("pages", JSON.stringify(savedPages));
-        alert("Pagina opgeslagen!");
-    } else {
-        alert("Vul zowel een naam als inhoud in.");
-    }
-}
-
-function editPage() {
-    const pageName = prompt("Voer de naam van de pagina in die je wilt bewerken:");
-    const page = savedPages.find(page => page.name === pageName);
-    if (page) {
-        document.getElementById("page-details").style.display = "block";
-        document.getElementById("page-name").value = page.name;
-        document.getElementById("page-content").value = page.content;
-    } else {
-        alert("Pagina niet gevonden.");
-    }
-}
-
-function deletePage() {
-    const pageName = prompt("Voer de naam van de pagina in die je wilt verwijderen:");
-    const index = savedPages.findIndex(page => page.name === pageName);
-    if (index !== -1) {
-        savedPages.splice(index, 1);
-        localStorage.setItem("pages", JSON.stringify(savedPages));
-        alert("Pagina verwijderd!");
-    } else {
-        alert("Pagina niet gevonden.");
-    }
-}
+    // Hier sla je de veranderingen op in een bestand of een database
+    console.log('Pagina titel: ' + pageTitle);
+    console.log('Pagina inhoud: ' + pageContent);
+});
