@@ -1,11 +1,12 @@
-/* Zorg ervoor dat de body en html de volledige hoogte hebben */
+/* Zorg ervoor dat de body en html de volledige hoogte hebben en een achtergrondkleur krijgen */
 html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;  /* Aangepaste achtergrondkleur voor de pagina */
 }
 
-/* De container moet de resterende ruimte vullen */
+/* De container moet de resterende ruimte vullen en zorgt ervoor dat de footer altijd onderaan komt */
 .container {
     min-height: 100%;
     display: flex;
@@ -17,9 +18,9 @@ main {
     flex-grow: 1;
 }
 
-/* Footer blijft aan de onderkant van de pagina */
+/* Footer wordt altijd aan de onderkant van de pagina gepositioneerd */
 footer {
-    background-color: #222;
+    background-color: #222; /* Achtergrondkleur van de footer */
     color: #fff;
     text-align: center;
     padding: 10px;
