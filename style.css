@@ -1,52 +1,137 @@
 /* Algemene instellingen */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #FFFFFF;
+    line-height: 1.6;
+    background-image: url('https://media.discordapp.net/attachments/1198702297325244528/1296507572685242511/Kopie_van_Black_Red_Abstract_Sport_Game_Slogan_Banner.png?ex=67303405&is=672ee285&hm=1291771a17cd0b39ef7b7f0ef79e0846543b789455da565de7b4d62258fb447f&=&format=webp&quality=lossless&width=1170&height=585');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 100px; /* Zorg ervoor dat de footer altijd onderaan komt */
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1A1A1A;
-    padding: 10px 20px;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.logo {
-    height: 50px;
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-nav a {
-    color: #FFFFFF;
+p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+a {
+    color: #f1c40f;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Content Box */
-.content-box {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+/* Navigatie */
+header {
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
+    padding: 20px 0;
 }
 
-/* Footer */
-footer {
-    background-color: #1A1A1A;
-    color: #FFFFFF;
+header .logo img {
+    width: 150px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Section Styling */
+.section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.rule-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.rule-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-align: center;
-    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.rule-button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
     position: fixed;
-    bottom: 0;
     width: 100%;
-    font-size: 14px;
+    bottom: 0;
+}
+
+/* Donkere rechthoeken met afgeronde hoeken voor tekst in secties */
+.section .container {
+    background-color: rgba(0, 0, 0, 0.6); /* Donkere achtergrond voor de tekst */
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    header .logo img {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
