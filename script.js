@@ -1,19 +1,61 @@
-function showRules(evt, serverName) {
-    var i, tabcontent, tablinks;
+let currentUser = null;
 
-    // Verberg alle tab-content elementen
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+// Wachtwoord validatie voor het admin paneel
+function adminLogin() {
+    const password = document.getElementById("password").value;
+    if (password === "JDG@admin") {
+        document.getElementById("admin-login").classList.add("hidden");
+        document.getElementById("admin-panel").classList.remove("hidden");
+        currentUser = "admin";
+    } else {
+        alert("Ongeldig wachtwoord");
     }
-
-    // Verwijder de "active" class van alle knoppen
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Toon de geselecteerde tab en voeg de "active" class toe aan de knop
-    document.getElementById(serverName).style.display = "block";
-    evt.currentTarget.className += " active";
+    return false;
 }
+
+// Uitloggen van het admin paneel
+function logout() {
+    document.getElementById("admin-login").classList.remove("hidden");
+    document.getElementById("admin-panel").classList.add("hidden");
+    currentUser = null;
+}
+
+// Laad en update pagina-inhoud
+function loadPageContent(page) {
+    const content = localStorage.getItem(page + "-content") || "Inhoud van " + page;
+    document.getElementById("page-content").value = content;
+}
+
+function updatePageContent() {
+    const page = document.getElementById("page-list").value;
+    const content = document.getElementById("page-content").value;
+    localStorage.setItem(page + "-content", content);
+    alert(page + " pagina bijgewerkt!");
+}
+
+// Achtergrond update
+function updateBackground() {
+    const bgUrl = document.getElementById("bg-url").value;
+    document.body.style.backgroundImage = `url(${bgUrl})`;
+    localStorage.setItem("background", bgUrl);
+}
+
+// Footer position update
+document.getElementById("fixed-footer").addEventListener("change", function () {
+    const footer = document.querySelector("footer");
+    if (this.checked) {
+        footer.style.position = "fixed";
+    } else {
+        footer.style.position = "static";
+    }
+    localStorage.setItem("footerFixed", this.checked);
+});
+
+// Initialisatie van opgeslagen instellingen
+window.onload = () => {
+    const bgUrl = localStorage.getItem("background");
+    if (bgUrl) {
+        document.body.style.backgroundImage = `url(${bgUrl})`;
+    }
+    document.getElementById("fixed-footer").checked = localStorage.getItem("footerFixed") === "true";
+};
