@@ -1,53 +1,39 @@
-/* Algemeen body en achtergrondstijl */
+/* Algemene body-stijlen met achtergrondafbeelding */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url("https://media.discordapp.net/attachments/1198702297325244528/1296507572685242511/Kopie_van_Black_Red_Abstract_Sport_Game_Slogan_Banner.png?ex=67303405&is=672ee285&hm=1291771a17cd0b39ef7b7f0ef79e0846543b789455da565de7b4d62258fb447f&=&format=webp&quality=lossless&width=1170&height=585");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
 }
 
-/* Centeren van de inhoud op de pagina */
+/* Container voor de hele inhoud */
 .container {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 20px;
 }
 
-/* Stijl voor de hoofdsecties (bijvoorbeeld info, contact, etc.) */
+/* Stijl voor de hoofdsecties */
 .section {
-    background-color: rgba(0, 0, 0, 0.5); /* Donkere rechthoek achtergrond */
-    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparante, donkere achtergrond */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    margin: 20px auto; /* Centreren van secties */
 }
 
-/* Flexbox om meerdere secties naast elkaar te plaatsen */
-.section-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-/* Verkorten van de tekstvakken */
-input, textarea {
-    width: 60%; /* Minder breed dan voorheen */
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
+/* Stijl voor knoppen */
 button {
-    width: 60%; /* Minder breed dan voorheen */
     padding: 10px;
     font-size: 16px;
     margin-top: 20px;
-    background-color: #2196F3;
+    background-color: #ff3333;
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,12 +41,11 @@ button {
 }
 
 button:hover {
-    background-color: #0b7dda;
+    background-color: #cc2929;
 }
 
-/* Footer altijd onderaan de pagina */
+/* Footer vastzetten onderaan de pagina */
 footer {
-    margin-top: 40px;
     background-color: #333;
     color: white;
     padding: 10px;
@@ -68,15 +53,15 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsieve aanpassingen voor mobiele schermen */
+/* Responsieve aanpassingen */
 @media (max-width: 768px) {
-    .section-container {
-        flex-direction: column;
+    .container {
+        width: 90%;
     }
-
-    input, textarea, button {
-        width: 100%; /* Volledige breedte op kleine schermen */
+    .section {
+        width: 90%;
     }
 }
