@@ -3,71 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD Games Website</title>
+    <title>JD Games Minecraft Server</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header met logo en navigatie voor hoofdmenu -->
+    <header>
+        <img src="https://media.discordapp.net/attachments/1198702297325244528/1296888692924874782/jdgames_logo.png?ex=67304577&is=672ef3f7&hm=d7633411486a4224e68af94f15939fdba91506d2d8e695fee9c7ae8a600658ee&=&format=webp&quality=lossless" alt="JD Games Logo" class="logo">
+        <nav>
+            <a href="#informatie">Informatie</a>
+            <a href="#contact">Contacteer ons</a>
+        </nav>
+    </header>
 
-    <!-- Navigatie -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="staff.html">Staff Leden</a>
-        <a href="regels.html">Regels</a>
-        <a href="admin.html">Admin Paneel</a>
-    </nav>
+    <!-- Hoofd Inhoud van de Pagina's -->
+    <main>
+        <section id="informatie">
+            <div class="content-box">
+                <h1>⚔️Welkom op de JD Games Minecraft Server⚔️</h1>
+                <p>✈️IP-adres: Play.jdgames.nl<br>
+                   ⚡Versie: 1.21+<br>
+                   ⚔️Gamemode: Survival & Skyblock<br>
+                   ❄️Openings Tijden: 24/7<br>
+                   ☎️ Discord: <a href="https://discord.gg/9haVXV8gXT">Join onze Discord</a><br>
+                   ⛄Website: <a href="https://shop.jdgames.nl">shop.jdgames.nl</a>
+                </p>
+            </div>
+        </section>
 
-    <!-- Hoofdpagina -->
-    <section id="home">
-        <div class="content-box">
-            <h1>Welkom op de JD Games Minecraft Server</h1>
-            <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
-            <!-- Meer content hier -->
-        </div>
-    </section>
+        <section id="contact">
+            <div class="content-box">
+                <h1>Contacteer ons</h1>
+                <p>☎️ Discord: Maak een ticket aan<br>
+                   ☎️ Email: JDGamesOfficialYT@gmail.com
+                </p>
+            </div>
+        </section>
+    </main>
 
-    <!-- Admin Panel Login -->
-    <section id="admin-login" class="hidden">
-        <h2>Admin Paneel Inloggen</h2>
-        <form onsubmit="return adminLogin()">
-            <label for="password">Wachtwoord:</label>
-            <input type="password" id="password">
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
-    <!-- Admin Panel -->
-    <section id="admin-panel" class="hidden">
-        <h2>Admin Paneel</h2>
-        <button onclick="logout()">Uitloggen</button>
-
-        <!-- Pagina beheer -->
-        <h3>Pagina's Beheren</h3>
-        <select id="page-list" onchange="loadPageContent(this.value)">
-            <option value="home">Home</option>
-            <option value="staff">Staff Leden</option>
-            <option value="regels">Regels</option>
-            <!-- Voeg meer paginaopties toe -->
-        </select>
-        <textarea id="page-content" rows="10" placeholder="Pas hier de inhoud van de pagina aan..."></textarea>
-        <button onclick="updatePageContent()">Update Pagina</button>
-
-        <!-- Achtergrondinstellingen -->
-        <h3>Achtergrond Instellingen</h3>
-        <input type="text" id="bg-url" placeholder="Achtergrond afbeelding URL">
-        <button onclick="updateBackground()">Update Achtergrond</button>
-
-        <!-- Layoutinstellingen -->
-        <h3>Layout Instellingen</h3>
-        <label>
-            <input type="checkbox" id="fixed-footer"> Footer vast aan onderkant
-        </label>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer met links naar Staff Team en Regels pagina's -->
     <footer>
-        <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
+        <nav>
+            <a href="#staff-team">Staff Team</a>
+            <a href="#regels">Regels</a>
+        </nav>
+        <p>© 2024 JD Games. Alle rechten voorbehouden. JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
