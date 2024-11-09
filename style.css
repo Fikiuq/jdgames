@@ -8,16 +8,20 @@ body {
     color: #fff;
 }
 
+/* Header Styling */
 header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.6); /* Zwarte achtergrond met transparantie */
+    padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 header .logo img {
-    max-width: 100px;
+    max-width: 150px;
+    margin-bottom: 15px;
 }
 
+/* Navigatie Menu Styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -31,46 +35,45 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Paginatitel stijlen */
+/* Paginatitel Styling */
 .page-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #fff;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Schaduw voor betere leesbaarheid */
+    margin-top: 100px; /* Ruimte boven de titel */
+    margin-bottom: 30px;
 }
 
-/* Container voor de hoofdinhoud */
+/* Hoofdsectie Styling */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-}
-
-h2, h3 {
-    font-size: 1.8rem;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Zachte achtergrond voor leesbaarheid */
+    border-radius: 8px;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+    margin-left: 20px;
 }
 
-ul li {
-    margin-bottom: 10px;
+h2, h3 {
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
