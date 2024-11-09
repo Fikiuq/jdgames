@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - JD Games</title>
+    <title>JD Games Updates</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="staff.html">Staff Team</a></li>
                     <li><a href="regels.html">Regels</a></li>
-                    <li><a href="updates.php">Updates</a></li> <!-- Nieuwe link naar de updates pagina -->
+                    <li><a href="updates.html">Updates</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,27 +26,13 @@
     <main>
         <section class="section">
             <div class="container">
-                <h1>⚔️ Welkom op de JD Games Minecraft Server ⚔️</h1>
-                <p>Welkom op de officiële website van JD Games! Hier kun je alles vinden over onze Minecraft servers, updates, en ons team. Neem gerust een kijkje!</p>
-
-                <h2>Wat is JD Games?</h2>
-                <p>JD Games is een community-gebaseerde Minecraft server met verschillende spelmodi, waaronder Factions, Skyblock en meer. Onze missie is om een leuke, veilige en spannende spelervaring te bieden voor iedereen.</p>
-
-                <h2>Waarom JD Games?</h2>
-                <p>Bij JD Games draait alles om de community. We zorgen voor regelmatige updates, evenementen en een actieve staff die altijd klaar staat om te helpen.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2>Onze Servers</h2>
-                <p>We bieden verschillende spelmodi aan, waaronder:</p>
-                <ul>
-                    <li><strong>Faction Server</strong> - Bouw je eigen imperium en strijd tegen andere spelers!</li>
-                    <li><strong>Skyblock Server</strong> - Begin je avontuur op een klein eiland en breid uit tot een gigantisch rijk!</li>
-                </ul>
-                <a href="faction.html" class="btn">Faction Server</a>
-                <a href="skyblock.html" class="btn">Skyblock Server</a>
+                <h1>🔔 Updates</h1>
+                <p>Bekijk de laatste updates en aankondigingen van JD Games.</p>
+                
+                <!-- Sectie waar de updates worden ingeladen -->
+                <div id="updates" class="updates-container">
+                    <!-- Updates worden hier ingeladen door JavaScript -->
+                </div>
             </div>
         </section>
     </main>
@@ -55,5 +41,35 @@
         <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
         <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
     </footer>
+
+    <!-- JavaScript om updates te laden -->
+    <script>
+        async function fetchUpdates() {
+            try {
+                const response = await fetch('data/updates.json');
+                const updates = await response.json();
+
+                const updatesContainer = document.getElementById('updates');
+                updatesContainer.innerHTML = ''; // Maak de container leeg
+
+                updates.forEach(update => {
+                    const updateElement = document.createElement('div');
+                    updateElement.classList.add('update');
+
+                    updateElement.innerHTML = `
+                        <h3>${update.title}</h3>
+                        <p><strong>Datum:</strong> ${update.date}</p>
+                        <p>${update.content}</p>
+                    `;
+                    updatesContainer.appendChild(updateElement);
+                });
+            } catch (error) {
+                console.error('Error loading updates:', error);
+            }
+        }
+
+        // Roep de functie aan om de updates op te halen
+        document.addEventListener('DOMContentLoaded', fetchUpdates);
+    </script>
 </body>
 </html>
