@@ -3,48 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD Games</title>
+    <title>JD Games Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Welkomstsectie -->
-        <div class="section">
-            <h2>Welkom op de JD Games Minecraft Server</h2>
-            <p>Informatie over ons:</p>
-            <ul>
-                <li>IP-adres: Play.jdgames.nl</li>
-                <li>Versie: 1.21+</li>
-                <li>Gamemode: Survival & Skyblock</li>
-                <li>Openings Tijden: 24/7</li>
-                <li>Discord: <a href="https://discord.gg/9haVXV8gXT" target="_blank">Klik hier</a></li>
-                <li>Website: <a href="https://shop.jdgames.nl" target="_blank">shop.jdgames.nl</a></li>
-            </ul>
-        </div>
 
-        <!-- Contactsectie -->
-        <div class="section">
-            <h2>Contacteer ons</h2>
-            <ul>
-                <li>Discord: Maak een ticket aan</li>
-                <li>Email: JDGamesOfficialYT@gmail.com</li>
-            </ul>
-        </div>
+    <!-- Navigatie -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff Leden</a>
+        <a href="regels.html">Regels</a>
+        <a href="admin.html">Admin Paneel</a>
+    </nav>
 
-        <!-- Teamsectie -->
-        <div class="section">
-            <h2>Staff Team</h2>
-            <ul>
-                <li>Jonathan - Eigenaar</li>
-                <li>David - Eigenaar</li>
-                <li>Nisse - Management</li>
-            </ul>
+    <!-- Hoofdpagina -->
+    <section id="home">
+        <div class="content-box">
+            <h1>Welkom op de JD Games Minecraft Server</h1>
+            <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
+            <!-- Meer content hier -->
         </div>
-    </div>
+    </section>
 
+    <!-- Admin Panel Login -->
+    <section id="admin-login" class="hidden">
+        <h2>Admin Paneel Inloggen</h2>
+        <form onsubmit="return adminLogin()">
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password">
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="admin-panel" class="hidden">
+        <h2>Admin Paneel</h2>
+        <button onclick="logout()">Uitloggen</button>
+
+        <!-- Pagina beheer -->
+        <h3>Pagina's Beheren</h3>
+        <select id="page-list" onchange="loadPageContent(this.value)">
+            <option value="home">Home</option>
+            <option value="staff">Staff Leden</option>
+            <option value="regels">Regels</option>
+            <!-- Voeg meer paginaopties toe -->
+        </select>
+        <textarea id="page-content" rows="10" placeholder="Pas hier de inhoud van de pagina aan..."></textarea>
+        <button onclick="updatePageContent()">Update Pagina</button>
+
+        <!-- Achtergrondinstellingen -->
+        <h3>Achtergrond Instellingen</h3>
+        <input type="text" id="bg-url" placeholder="Achtergrond afbeelding URL">
+        <button onclick="updateBackground()">Update Achtergrond</button>
+
+        <!-- Layoutinstellingen -->
+        <h3>Layout Instellingen</h3>
+        <label>
+            <input type="checkbox" id="fixed-footer"> Footer vast aan onderkant
+        </label>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
-        <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
