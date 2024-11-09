@@ -4,18 +4,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header styling */
+/* Header en navigatie */
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 header .logo img {
-    width: 100px;
+    width: 120px;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -33,9 +35,16 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Secties */
+.section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
 /* Regels sectie */
 #rules {
-    padding: 20px;
     text-align: center;
 }
 
@@ -51,12 +60,15 @@ nav ul li a {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    margin: 0 10px;
+    font-size: 16px;
 }
 
 .tablinks:hover {
     background-color: #45a049;
+}
+
+#factions, #skyblock {
+    display: none;
 }
 
 /* Footer */
@@ -65,7 +77,13 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+/* Styling voor de staff lijst */
+ul {
+    line-height: 1.6;
+}
+
+strong {
+    font-size: 18px;
 }
