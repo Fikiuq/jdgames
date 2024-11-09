@@ -13,10 +13,35 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: #fff;
-    min-height: 100vh;
-    padding-bottom: 100px; /* Zorg ervoor dat de footer altijd onderaan komt */
+    padding-bottom: 60px; /* Ruimte voor de footer */
 }
 
+/* Zorg ervoor dat de footer altijd onderaan blijft */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* Zorg ervoor dat de andere elementen (zoals de header) goed op de pagina blijven */
+main {
+    padding-bottom: 60px; /* Ruimte voor de footer */
+}
+
+/* Styling voor de footer tekst */
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Algemene pagina styling */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -58,7 +83,7 @@ header {
 }
 
 header .logo img {
-    width: 150px;
+    width: 120px;
     margin-left: 20px;
 }
 
@@ -74,44 +99,6 @@ nav ul li {
 nav ul li a {
     font-size: 1.2em;
     color: white;
-}
-
-/* Section Styling */
-.section {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 50px 0;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.rule-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.rule-button {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.rule-button:hover {
-    background-color: #c0392b;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 /* Donkere rechthoeken met afgeronde hoeken voor tekst in secties */
