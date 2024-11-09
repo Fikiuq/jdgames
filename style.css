@@ -1,64 +1,53 @@
-/* Algemene instellingen */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Header en navigatie */
 header {
     background-color: #333;
     color: white;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
-header .logo img {
-    width: 120px;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
+header nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
-/* Secties */
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
 .section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0;
     background-color: white;
     border-radius: 8px;
 }
 
-/* Regels sectie */
-#rules {
-    text-align: center;
-}
-
-.tabcontent {
-    display: none;
-    text-align: left;
-    margin-top: 20px;
+h2, h3 {
+    color: #333;
 }
 
 .tablinks {
-    background-color: #4CAF50;
-    color: white;
     padding: 10px 20px;
+    background-color: #4CAF50;
     border: none;
+    color: white;
     cursor: pointer;
     font-size: 16px;
 }
@@ -67,11 +56,14 @@ nav ul li a {
     background-color: #45a049;
 }
 
-#factions, #skyblock {
+.tabcontent {
     display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 10px;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -79,7 +71,6 @@ footer {
     padding: 10px;
 }
 
-/* Styling voor de staff lijst */
 ul {
     line-height: 1.6;
 }
