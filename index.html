@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD Games Updates</title>
+    <title>JD Games - Welkom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,22 +17,31 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="staff.html">Staff Team</a></li>
                     <li><a href="regels.html">Regels</a></li>
-                    <li><a href="updates.html">Updates</a></li>
+                    <li><a href="updates.html">Updates</a></li> <!-- Link naar de updates pagina -->
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section">
+        <section class="section welcome">
             <div class="container">
-                <h1>🔔 Updates</h1>
-                <p>Bekijk de laatste updates en aankondigingen van JD Games.</p>
-                
-                <!-- Sectie waar de updates worden ingeladen -->
-                <div id="updates" class="updates-container">
-                    <!-- Updates worden hier ingeladen door JavaScript -->
-                </div>
+                <h1>⚔️ Welkom op de JD Games Minecraft Server ⚔️</h1>
+                <p>Op onze server beleef je een unieke Minecraft-ervaring! Doe mee aan epische gevechten, bouw de beste basissen en geniet van een gezellige community.</p>
+            </div>
+        </section>
+
+        <section class="section about">
+            <div class="container">
+                <h2>Informatie Over Ons</h2>
+                <p>JD Games is een Minecraft-server die spelers van over de hele wereld verwelkomt. Met een toegewijd team zorgen we voor een veilige en leuke speelomgeving.</p>
+            </div>
+        </section>
+
+        <section class="section contact">
+            <div class="container">
+                <h2>Contacteer Ons</h2>
+                <p>Heb je vragen of suggesties? Neem contact op via onze sociale kanalen of stuur ons een bericht.</p>
             </div>
         </section>
     </main>
@@ -41,35 +50,5 @@
         <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
         <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
     </footer>
-
-    <!-- JavaScript om updates te laden -->
-    <script>
-        async function fetchUpdates() {
-            try {
-                const response = await fetch('data/updates.json');
-                const updates = await response.json();
-
-                const updatesContainer = document.getElementById('updates');
-                updatesContainer.innerHTML = ''; // Maak de container leeg
-
-                updates.forEach(update => {
-                    const updateElement = document.createElement('div');
-                    updateElement.classList.add('update');
-
-                    updateElement.innerHTML = `
-                        <h3>${update.title}</h3>
-                        <p><strong>Datum:</strong> ${update.date}</p>
-                        <p>${update.content}</p>
-                    `;
-                    updatesContainer.appendChild(updateElement);
-                });
-            } catch (error) {
-                console.error('Error loading updates:', error);
-            }
-        }
-
-        // Roep de functie aan om de updates op te halen
-        document.addEventListener('DOMContentLoaded', fetchUpdates);
-    </script>
 </body>
 </html>
