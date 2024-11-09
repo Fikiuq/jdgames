@@ -7,27 +7,22 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <div class="admin-container">
-        <h1>Admin Panel</h1>
-        <div id="login">
-            <input type="password" id="admin-password" placeholder="Voer het wachtwoord in">
-            <button onclick="checkPassword()">Login</button>
-        </div>
+    <div id="admin-panel">
+        <h2>Admin Panel</h2>
+        <label for="page-select">Selecteer een pagina om te bewerken:</label>
+        <select id="page-select">
+            <option value="home">Home</option>
+            <option value="contact">Contact</option>
+            <option value="staff">Staff Team</option>
+            <!-- Voeg hier andere pagina's toe die je beheert -->
+        </select>
+        <button id="edit-page-button">Bewerken</button>
 
-        <div id="panel" style="display:none;">
-            <h2>Pagina Instellingen</h2>
-            <div class="admin-actions">
-                <button onclick="addPage()">Pagina Toevoegen</button>
-                <button onclick="editPage()">Pagina Bewerken</button>
-                <button onclick="deletePage()">Pagina Verwijderen</button>
-            </div>
-
-            <div id="page-details" style="display:none;">
-                <h3>Pagina Bewerkingen</h3>
-                <input type="text" id="page-name" placeholder="Pagina Naam">
-                <textarea id="page-content" placeholder="Pagina Inhoud"></textarea>
-                <button onclick="savePage()">Opslaan</button>
-            </div>
+        <div id="page-details">
+            <h3>Details van de geselecteerde pagina:</h3>
+            <input type="text" id="page-title" placeholder="Titel van de pagina" />
+            <textarea id="page-content" placeholder="Voer de inhoud van de pagina in..."></textarea>
+            <button id="save-changes">Wijzigingen opslaan</button>
         </div>
     </div>
 
