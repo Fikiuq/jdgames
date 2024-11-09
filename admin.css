@@ -1,80 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-#login {
-    text-align: center;
-    padding-top: 50px;
-}
-
-#login input {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-#panel {
-    display: none;
+/* Specifieke CSS voor de adminpagina */
+#admin-panel {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#panel button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#panel button:hover {
-    background-color: #45a049;
-}
-
-#page-details {
-    margin-top: 20px;
-}
-
-#page-details input,
-#page-details textarea {
+#admin-panel select,
+#admin-panel button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-#page-details button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 20px;
+#admin-panel button {
     background-color: #2196F3;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-#page-details button:hover {
+#admin-panel button:hover {
     background-color: #0b7dda;
 }
-
-#page-list {
-    margin-top: 20px;
-}
-
-.page-entry {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.page
