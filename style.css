@@ -3,7 +3,9 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;  /* Aangepaste achtergrondkleur voor de pagina */
+    background-image: url('b.png');  /* Aangepaste achtergrondafbeelding */
+    background-size: cover;         /* Zorgt ervoor dat de afbeelding de volledige pagina bedekt */
+    background-position: center;    /* Zorgt ervoor dat de afbeelding gecentreerd wordt */
 }
 
 /* De container moet de resterende ruimte vullen en zorgt ervoor dat de footer altijd onderaan komt */
