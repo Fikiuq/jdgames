@@ -1,42 +1,52 @@
+/* Algemene instellingen */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('your-image-url.jpg');
-    background-size: cover;
+    background-color: #121212;
+    color: #FFFFFF;
 }
 
-.hidden {
-    display: none;
-}
-
-nav {
+/* Header */
+header {
     display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A1A;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
 }
 
 nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
-    margin: 0 1em;
+    margin: 0 15px;
+    font-size: 18px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content Box */
 .content-box {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 2em;
-    width: 60%;
-    margin: 2em auto;
-    color: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
 }
 
+/* Footer */
 footer {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
+    font-size: 14px;
 }
