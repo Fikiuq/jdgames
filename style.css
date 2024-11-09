@@ -61,6 +61,10 @@ ul li {
     margin-bottom: 10px;
 }
 
+h3 {
+    color: #444;
+}
+
 /* Styling voor actieve sectie */
 .section.active {
     display: block; /* Alleen de actieve sectie is zichtbaar */
