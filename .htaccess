@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Omleiding voor 'somsdavidyoutube' naar de YouTube-pagina
+RewriteRule ^somsdavidyoutube$ https://www.youtube.com/@SomsDavid/ [R=301,L]
