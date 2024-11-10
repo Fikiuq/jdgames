@@ -1,58 +1,56 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Games - Welkom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.png" alt="JD Games Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="staff.html">Staff Team</a></li>
+                        <li><a href="regels.html">Regels</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('b.png');
-    background-size: cover;
-    background-attachment: fixed;
-    color: #FFFFFF;
-}
+        <main>
+            <section class="section welcome">
+                <div class="container">
+                    <h1>⚔️ Welkom op de JD Games Minecraft Server ⚔️</h1>
+                    <p>Op onze server beleef je een unieke Minecraft-ervaring! Doe mee aan epische gevechten, bouw de beste basissen en geniet van een gezellige community.</p>
+                </div>
+            </section>
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
+            <section class="section about">
+                <div class="container">
+                    <h2>💬 Informatie Over Ons</h2>
+                    <p>JD Games is een Minecraft-server die spelers van over de hele wereld verwelkomt. Met een toegewijd team zorgen we voor een veilige en leuke speelomgeving.</p>
+                </div>
+            </section>
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-    text-align: center;
-}
+            <section class="section contact">
+                <div class="container">
+                    <h2>📬 Contacteer Ons</h2>
+                    <p>Heb je vragen of suggesties? Neem contact op via onze sociale kanalen of stuur ons een bericht.</p>
+                </div>
+            </section>
+        </main>
 
-header .logo img {
-    max-width: 150px;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-.section {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    margin: 20px 0;
-    border-radius: 8px;
-    text-align: center;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    text-align: center;
-    color: #FFF;
-}
+        <footer>
+            <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
+            <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
+        </footer>
+    </div>
+</body>
+</html>
