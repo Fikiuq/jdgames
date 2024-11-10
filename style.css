@@ -1,109 +1,96 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Algemene stijl voor body */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background-image: url('b.png');
+    margin: 0;
+    padding: 0;
+    background: url('b.png') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: #333;
 }
 
-/* Header */
+/* Header-stijlen */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(34, 34, 34, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     padding: 10px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .logo img {
-    max-width: 120px;
+    max-height: 50px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-top: 10px;
 }
 
 header nav ul li a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: bold;
 }
 
 header nav ul li a:hover {
-    background-color: #007acc;
+    text-decoration: underline;
 }
 
-/* Main Sections */
-main {
-    margin-top: 120px;
-    flex: 1;
-}
-
-section {
-    padding: 60px 20px;
+/* Welkom sectie */
+.welcome-section h1 {
+    font-size: 2.5em;
     text-align: center;
-}
-
-.welcome-section {
-    background: rgba(255, 255, 255, 0.9);
+    margin: 30px 0;
     color: #222;
-    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Over ons en contact secties */
 .about-section, .contact-section {
-    background: rgba(34, 34, 34, 0.8);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
-    padding: 60px 20px;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-section h1, section h2 {
-    font-size: 2.4em;
+.about-section h2, .contact-section h2 {
+    font-size: 1.8em;
     margin-bottom: 15px;
 }
 
-section p {
+.about-section ul, .contact-section ul {
+    list-style: none;
     font-size: 1.2em;
-    max-width: 800px;
-    margin: auto;
     line-height: 1.6;
+}
+
+.about-section ul li, .contact-section ul li {
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(34, 34, 34, 0.9);
-    color: #FFF;
-    font-size: 0.9em;
-    position: relative;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
 }
