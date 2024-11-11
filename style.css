@@ -47,51 +47,37 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Welkom sectie */
-.welcome-section h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin: 20px 0;
-    color: #222;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Over ons en contact secties */
-.about-section, .contact-section {
-    background: rgba(255, 255, 255, 0.8);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-section h2, .contact-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.about-section ul, .contact-section ul {
-    list-style: none;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.about-section ul li, .contact-section ul li {
-    margin-bottom: 10px;
-}
-
-/* Transparante achtergrond voor staff.html en regels.html secties */
-.staff-section, .regels-section {
-    background: rgba(0, 0, 0, 0.5); /* Half transparant */
+/* Stijl voor secties zoals Welkom en Staff */
+.staff-section {
+    background: rgba(0, 0, 0, 0.5); /* Half transparante achtergrond */
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
     margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.staff-section h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffcc00;
+}
+
+.staff-section h2 {
+    font-size: 1.8em;
+    margin-top: 15px;
+    color: #ffcc00;
+}
+
+.staff-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.staff-section ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 /* Footer */
