@@ -1,105 +1,52 @@
-/* Algemene stijlinstellingen */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="JD Games Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="staff.html">Staff Team</a></li>
+                    <li><a href="regels.html">Regels</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background: url('b.png') no-repeat center center fixed;
-    background-size: cover;
-    line-height: 1.6;
-}
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="page-title">⚔️Welkom op de JD Games Minecraft Server⚔️</h1>
+                
+                <p>Informatie Over ons:</p>
+                <p>✈️ IP-adres: Play.jdgames.nl<br>
+                   ⚡ Versie: 1.21+<br>
+                   ⚔️ Gamemode: Survival & Skyblock<br>
+                   ❄️ Openings Tijden: 24/7<br>
+                   ☎️ Discord: <a href="https://discord.gg/9haVXV8gXT" target="_blank">https://discord.gg/9haVXV8gXT</a><br>
+                   ⛄ Website: <a href="https://shop.jdgames.nl" target="_blank">shop.jdgames.nl</a>
+                </p>
+                
+                <h2>Contacteer ons:</h2>
+                <p>☎️ Discord: Maak een ticket aan<br>
+                   ☎️ Email: <a href="mailto:JDGamesOfficialYT@gmail.com">JDGamesOfficialYT@gmail.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Header en navigatie */
-header {
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .logo img {
-    width: 120px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
-/* Pagina-titel */
-.page-title {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 20px 0;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Hoofdinhoud sectie met donkere achtergrond */
-.section {
-    padding: 20px;
-    background-color: rgba(33, 33, 33, 0.8); /* Donkergrijze achtergrond */
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-}
-
-/* Footer stijl */
-footer {
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9em;
-}
-
-/* Responsieve stijl voor mobiele apparaten */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .page-title {
-        font-size: 2em;
-    }
-}
+    <footer>
+        <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
+        <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
+    </footer>
+</body>
+</html>
