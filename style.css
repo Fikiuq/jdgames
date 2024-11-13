@@ -7,16 +7,23 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: #333;
     background: url('b.png') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
 /* Header en navigatie */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
 }
 
 header .container {
@@ -27,11 +34,10 @@ header .container {
 
 header .logo img {
     width: 120px;
-    vertical-align: middle;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     gap: 15px;
 }
@@ -39,52 +45,52 @@ nav ul {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
+    padding: 8px 15px;
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #444;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Introductie sectie */
-.intro-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Intro sectie */
+.intro {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 100px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 50px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.intro-section h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #ffcc00;
+.intro h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.info {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.info p, .info ul {
+.intro .info ul {
+    list-style: none;
+    padding: 0;
     margin: 10px 0;
 }
 
-.info ul li {
+.intro .info ul li {
     margin: 5px 0;
 }
 
-/* Footer stijl */
+.intro .info a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.intro .info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ccc;
@@ -92,21 +98,4 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
     margin-top: 20px;
-}
-
-/* Responsieve stijl voor mobiele apparaten */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro-section h1 {
-        font-size: 2em;
-    }
 }
