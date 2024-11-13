@@ -35,7 +35,7 @@ header {
 }
 
 header .logo img {
-    width: 100px; /* Kleinere logo */
+    width: 100px;
 }
 
 nav ul {
@@ -68,16 +68,17 @@ nav ul li a:hover {
     padding: 40px 0 20px;
 }
 
-/* Hoofdinhoud sectie */
+/* Hoofdinhoud sectie met donkergrijze rechthoek */
 .section, .staff-section {
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(50, 50, 50, 0.9); /* Donkergrijs met transparantie */
     border-radius: 10px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     max-width: 900px;
     margin: 20px auto;
     text-align: center;
+    color: #f4f4f4; /* Lichte tekstkleur */
 }
 
 /* Staff lijst stijl */
@@ -90,7 +91,7 @@ nav ul li a:hover {
 .staff-list li {
     margin: 15px 0;
     font-size: 1.1em;
-    color: #333;
+    color: #ddd;
 }
 
 /* Knoppen stijl */
