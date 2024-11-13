@@ -1,4 +1,4 @@
-/* Algemene stijlen */
+/* Algemene stijlinstellingen */
 * {
     margin: 0;
     padding: 0;
@@ -17,85 +17,139 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /* Header en navigatie */
 header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
-}
-
-header .container {
+    background-color: rgba(51, 51, 51, 0.85);
+    color: #fff;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 header .logo img {
-    width: 120px;
+    width: 120px; /* Kleinere logo */
+    vertical-align: middle;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 15px;
+    font-size: 1.1em;
     font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #ddd;
 }
 
-/* Intro sectie */
-.intro {
-    background-color: rgba(255, 255, 255, 0.85);
+/* Pagina-titel */
+.page-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hoofdinhoud sectie */
+.section, .staff-section {
     padding: 30px;
-    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.intro h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.intro .info ul {
+/* Staff lijst stijl */
+.staff-list {
     list-style: none;
     padding: 0;
+    margin: 20px 0;
+}
+
+.staff-list li {
     margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
 }
 
-.intro .info ul li {
-    margin: 5px 0;
+/* Button Container en stijl voor knoppen */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.intro .info a {
-    color: #1a73e8;
-    text-decoration: none;
+.rule-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #444;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.intro .info a:hover {
-    text-decoration: underline;
+.rule-button:hover {
+    background-color: #666;
+    transform: scale(1.05);
 }
 
-/* Footer */
+/* Footer stijl */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ccc;
+    background-color: rgba(51, 51, 51, 0.85);
+    color: #fff;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
     margin-top: 20px;
+}
+
+/* Responsieve stijl voor mobiele apparaten */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .page-title {
+        font-size: 2em;
+    }
+
+    .rule-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
 }
