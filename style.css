@@ -1,52 +1,167 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD Games</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="JD Games Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="staff.html">Staff Team</a></li>
-                    <li><a href="regels.html">Regels</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Reset en basisstijl */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h1 class="page-title">⚔️Welkom op de JD Games Minecraft Server⚔️</h1>
-                
-                <p>Informatie Over ons:</p>
-                <p>✈️ IP-adres: Play.jdgames.nl<br>
-                   ⚡ Versie: 1.21+<br>
-                   ⚔️ Gamemode: Survival & Skyblock<br>
-                   ❄️ Openings Tijden: 24/7<br>
-                   ☎️ Discord: <a href="https://discord.gg/9haVXV8gXT" target="_blank">https://discord.gg/9haVXV8gXT</a><br>
-                   ⛄ Website: <a href="https://shop.jdgames.nl" target="_blank">shop.jdgames.nl</a>
-                </p>
-                
-                <h2>Contacteer ons:</h2>
-                <p>☎️ Discord: Maak een ticket aan<br>
-                   ☎️ Email: <a href="mailto:JDGamesOfficialYT@gmail.com">JDGamesOfficialYT@gmail.com</a>
-                </p>
-            </div>
-        </section>
-    </main>
+body {
+    font-family: Arial, sans-serif;
+    background: url('b.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+    line-height: 1.6;
+}
 
-    <footer>
-        <p>&copy; 2024 JD Games. Alle rechten voorbehouden.</p>
-        <p>JD Games is op geen enkele manier verbonden met Mojang, AB.</p>
-    </footer>
-</body>
-</html>
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header en navigatie */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Pagina-titel */
+.page-title {
+    text-align: center;
+    font-size: 2.8em;
+    color: #fff;
+    font-weight: bold;
+    padding: 40px 0 20px;
+}
+
+/* Hoofdinhoud sectie met donkergrijze achtergrond achter tekst */
+.section, .staff-section {
+    padding: 40px;
+    background-color: rgba(50, 50, 50, 0.9); /* Donkergrijs met transparantie */
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    color: #f4f4f4; /* Lichte tekstkleur */
+}
+
+/* Specifieke stijl voor tekstachtergrond */
+.section p, .staff-section p {
+    background-color: rgba(50, 50, 50, 0.9); /* Donkergrijze rechthoek */
+    padding: 15px;
+    border-radius: 8px;
+    color: #f4f4f4;
+    font-size: 1.1em;
+    display: inline-block; /* Zorgt ervoor dat achtergrond zich aan de tekst aanpast */
+}
+
+/* Staff lijst stijl */
+.staff-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.staff-list li {
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+/* Knoppen stijl */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.rule-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.rule-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Footer stijl */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 20px;
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsieve stijl voor mobiele apparaten */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .page-title {
+        font-size: 2em;
+    }
+
+    .rule-button {
+        width: 100%;
+    }
+}
