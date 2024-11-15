@@ -91,6 +91,35 @@ nav ul li a:hover {
     display: inline-block; /* Zorgt ervoor dat achtergrond zich aan de tekst aanpast */
 }
 
+/* Informatievakken voor index.html */
+.info-box, .contact-box {
+    background-color: rgba(33, 33, 33, 0.9); /* Donkergrijs met lichte transparantie */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info-box ul, .contact-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box ul li, .contact-box ul li {
+    margin: 10px 0;
+}
+
+.info-box ul li a, .contact-box ul li a {
+    color: #4CAF50; /* Groen voor links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-box ul li a:hover, .contact-box ul li a:hover {
+    color: #81C784; /* Lichter groen bij hover */
+}
+
 /* Staff lijst stijl */
 .staff-list {
     list-style: none;
